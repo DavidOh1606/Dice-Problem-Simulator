@@ -1,4 +1,5 @@
 #include "Simulator.h"
+#include "RollToSequence.h"
 
 #include <iostream>
 

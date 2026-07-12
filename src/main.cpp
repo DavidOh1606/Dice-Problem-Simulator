@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Simulator.h"
 #include "Expected.h"
+#include "RollToSequence.h"
 #include <random>
 #include <deque>
 
@@ -11,13 +12,14 @@ int main()
 
     condition.push_back(1);
     condition.push_back(2);
+    condition.push_back(3);
 
 
-    Expected expected { condition, std::uniform_int_distribution<>{1, 6} };
+    RollToSequence expected { condition };
 
     Simulator sim;
 
-    sim.runSimulation(expected, 10000, true);
+    sim.runSimulation(expected, 40000, true);
 
     return 0;
 }

@@ -6,15 +6,13 @@
 
 class Expected
 {
-    std::vector<int> m_condition;
-    std::uniform_int_distribution<> m_die { 1, 6 };
-
-
-    bool conditionMet(std::deque<int>& rolls);
+protected:
+    std::uniform_int_distribution<> m_die;
 
 public:
-    Expected(const std::vector<int>& condition, const std::uniform_int_distribution<>& die);
+    Expected();
+    Expected(const std::uniform_int_distribution<>& die);
 
-    int runSample(std::mt19937& mt);
+    virtual int runSample(std::mt19937& mt) = 0;
 
 };
