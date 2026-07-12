@@ -2,6 +2,9 @@
 
 #include <random>
 
+#include "Expected.h"
+
+
 class Simulator
 {
     std::random_device rd{};
@@ -13,6 +16,5 @@ class Simulator
 public:
     Simulator();
 
-
-
+    void runSimulation(Expected& expected, int numSamples, bool printSamples);
 };
