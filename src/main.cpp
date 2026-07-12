@@ -2,6 +2,7 @@
 #include "Simulator.h"
 #include "Expected.h"
 #include "RollToSequence.h"
+#include "RollValue.h"
 #include <random>
 #include <deque>
 
@@ -16,9 +17,12 @@ int main()
 
 
     RollToSequence expected { condition };
+    RollValue value { 1 };
+
 
     Simulator sim;
 
+    // sim.runSimulation(value, 40000, true);
     sim.runSimulation(expected, 40000, true);
 
     return 0;

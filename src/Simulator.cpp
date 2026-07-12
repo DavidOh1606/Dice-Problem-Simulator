@@ -19,11 +19,11 @@ void Simulator::runSimulation(Expected& expected, int numSamples, bool printSamp
 
         if (printSamples)
         {
-            std::cout << "Sample: " << i << '\t' << "Num Rolls: " << numRolls << "\n\n";
+            std::cout << "Sample: " << i << '\t' << expected.valueName() << ": " << numRolls << "\n\n";
         }
     }
 
-    std::cout << "Total average rolls: " << (total / numSamples) << '\n';
+    std::cout << "Total Average " << expected.valueName() << ": " << (total / numSamples) << '\n';
 
 
 }
