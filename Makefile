@@ -5,15 +5,16 @@ CXX_FLAGS := -o3 -std=c++17 -Wall
 
 SRC_FILES := $(wildcard src/*.cpp)
 OBJ_FILES := $(patsubst src/%.cpp, build/%.o, $(SRC_FILES))
+LDFLAGS := -o3
 INCLUDES := -I./includes
 
 all:$(OUTPUT)
 
-$(OUTPUT):$(OBJ_FILES)
-	$(CXX) $(OBJ_FILES) -o ./build/$@
+$(OUTPUT):$(OBJ_FILES) Makefile
+	$(CXX) $(OBJ_FILES) $(LDFLAGS) -o ./build/$@ 
 
-$(OBJ_FILES):$(SRC_FILES)
-	$(CXX) -c $(CXX_FLAGS) $(SRC_FILES) $(INCLUDES) -o $@
+./build/%.o: ./src/%.cpp
+	$(CXX) -c $(CXX_FLAGS) $(INCLUDES) $< -o $@
 
 clean:
 	rm -f $(OBJ_FILES) ./build/dice-problem-simulator
