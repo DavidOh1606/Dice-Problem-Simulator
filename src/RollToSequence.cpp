@@ -2,15 +2,15 @@
 #include "RollToSequence.h"
 #include <iostream>
 
-RollToSequence::RollToSequence(std::vector<int> sequence)
+RollToSequence::RollToSequence(const std::vector<int>& sequence)
     : RollToSequence(sequence, std::uniform_int_distribution<> { 1, 6 })
 {
 
 }
 
-RollToSequence::RollToSequence(std::vector<int> sequence, 
-                        std::uniform_int_distribution<> die)
-    : Expected(die), m_sequence(sequence)
+RollToSequence::RollToSequence(const std::vector<int>& sequence, 
+                        const std::uniform_int_distribution<>& die)
+    : Expected(die), m_sequence{sequence}
 {
     for (int i : m_sequence)
     {
