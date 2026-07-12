@@ -13,7 +13,6 @@ class Expected
     bool conditionMet(std::deque<int>& rolls);
 
 public:
-
     Expected(const std::vector<int>& condition, const std::uniform_int_distribution<>& die);
 
     int runSample(std::mt19937& mt);

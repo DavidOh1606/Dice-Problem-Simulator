@@ -6,3 +6,14 @@ Create a build folder then run with:
 ```bash 
 make run
 ```
+
+Some problems to implement:
+
+1. Expected value of rolling a die or multiple dice in one roll.
+
+2. Expected number of rolls until a number or a sequence of numbers is rolled.
+
+3. Expected value of the max/min of some number of dice rolled.
+
+4. Expected number of rolls until all faces have been rolled.
+
