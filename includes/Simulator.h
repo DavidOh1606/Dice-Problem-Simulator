@@ -2,7 +2,7 @@
 
 #include <random>
 
-#include "Expected.h"
+#include "Simulation.h"
 
 
 class Simulator
@@ -16,5 +16,5 @@ class Simulator
 public:
     Simulator();
 
-    void runSimulation(Expected& expected, int numSamples, bool printSamples);
+    void runSimulation(Simulation& expected, int numSamples, bool printSamples);
 };

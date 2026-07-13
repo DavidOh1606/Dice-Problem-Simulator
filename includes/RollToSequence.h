@@ -1,9 +1,10 @@
 #pragma once
 
-#include "Expected.h"
+#include "Simulation.h"
+#include <deque>
 
 // Gets the number of rolls until a given sequence of numbers have been rolled
-class RollToSequence : public Expected
+class RollToSequence : public Simulation
 {
 
     std::vector<int> m_sequence;

@@ -1,9 +1,9 @@
 #pragma once
 
-#include "Expected.h"
+#include "Simulation.h"
 
 // Gets the sum of n die rolled
-class RollValue : public Expected
+class RollValue : public Simulation
 {
     int m_numDie;
 

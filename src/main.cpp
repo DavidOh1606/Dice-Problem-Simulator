@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Simulator.h"
-#include "Expected.h"
+#include "Simulation.h"
 #include "RollToSequence.h"
 #include "RollValue.h"
 #include <random>
@@ -22,8 +22,8 @@ int main()
 
     Simulator sim;
 
-    // sim.runSimulation(value, 40000, true);
-    sim.runSimulation(expected, 40000, true);
+    sim.runSimulation(value, 40000, true);
+    // sim.runSimulation(expected, 40000, true);
 
     return 0;
 }

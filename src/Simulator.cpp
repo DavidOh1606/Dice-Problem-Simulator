@@ -8,7 +8,7 @@ Simulator::Simulator()
     
 }
 
-void Simulator::runSimulation(Expected& expected, int numSamples, bool printSamples)
+void Simulator::runSimulation(Simulation& expected, int numSamples, bool printSamples)
 {
     float total { 0 };
 

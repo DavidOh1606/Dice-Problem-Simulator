@@ -7,7 +7,7 @@ RollValue::RollValue(int numDie)
 }
 
 RollValue::RollValue(int numDie, const std::uniform_int_distribution<>& die)
-    : Expected("Sum of Rolls", die), m_numDie{numDie}
+    : Simulation("Sum of Rolls", die), m_numDie{numDie}
 {
 
 }
