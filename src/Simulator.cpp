@@ -8,20 +8,20 @@ Simulator::Simulator()
     
 }
 
-void Simulator::runSimulation(Simulation& expected, int numSamples, bool printSamples)
+void Simulator::runSimulation(Simulation& simulation, int numSamples, bool printSamples)
 {
     float total { 0 };
 
     for (int i { 0 }; i < numSamples; i++)
     {
-        int numRolls = expected.runSample(mt);
+        int numRolls = simulation.runSample(mt);
         total += numRolls;
 
         if (printSamples)
         {
-            std::cout << "Sample: " << i << '\t' << expected.valueName() << ": " << numRolls << "\n\n";
+            std::cout << "Sample: " << i << '\t' << simulation.valueName() << ": " << numRolls << "\n\n";
         }
     }
 
-    std::cout << expected.totalValueName() << ": " << (total / numSamples) << '\n';
+    std::cout << simulation.totalValueName() << ": " << (total / numSamples) << '\n';
 }
