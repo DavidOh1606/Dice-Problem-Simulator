@@ -11,7 +11,7 @@ RollToSequence::RollToSequence(const std::vector<int>& sequence)
 
 RollToSequence::RollToSequence(const std::vector<int>& sequence, 
                         const std::uniform_int_distribution<>& die)
-    : Simulation("Num Rolls", die), m_sequence{sequence}
+    : Simulation("Num Rolls", "Average Num Rolls", die), m_sequence{sequence}
 {
     for (int i : m_sequence)
     {

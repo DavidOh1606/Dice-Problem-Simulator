@@ -23,7 +23,5 @@ void Simulator::runSimulation(Simulation& expected, int numSamples, bool printSa
         }
     }
 
-    std::cout << "Total Average " << expected.valueName() << ": " << (total / numSamples) << '\n';
-
-
+    std::cout << expected.totalValueName() << ": " << (total / numSamples) << '\n';
 }

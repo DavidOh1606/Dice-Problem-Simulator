@@ -7,7 +7,7 @@ RollValue::RollValue(int numDie)
 }
 
 RollValue::RollValue(int numDie, const std::uniform_int_distribution<>& die)
-    : Simulation("Sum of Rolls", die), m_numDie{numDie}
+    : Simulation("Sum of Rolls", "Average Sum of Rolls", die), m_numDie{numDie}
 {
 
 }
