@@ -19,14 +19,14 @@ int main()
 
 
     RollToSequence expected { condition };
-    RollValueMax value { 3, std::uniform_int_distribution<> { 1, 20 } };
+    RollValueMax value { 3, std::uniform_int_distribution<> { -4, -1 } };
     RollAllFaces faces { std::uniform_int_distribution<> { 1, 2 }};
 
     Simulator sim;
 
-    sim.runSimulation(faces, 40000, true);
+    // sim.runSimulation(faces, 40000, true);
     // sim.runSimulation(expected, 40000, true);
-    // sim.runSimulation(value, 40000, true);
+    sim.runSimulation(value, 40000, true);
 
     return 0;
 }
