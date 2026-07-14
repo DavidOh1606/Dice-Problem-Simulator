@@ -3,6 +3,7 @@
 #include "Simulation.h"
 #include "RollToSequence.h"
 #include "RollValue.h"
+#include "RollValueMax.h"
 #include <random>
 #include <deque>
 
@@ -17,7 +18,7 @@ int main()
 
 
     RollToSequence expected { condition };
-    RollValue value { 1 };
+    RollValueMax value { 10 };
 
 
     Simulator sim;

@@ -14,7 +14,7 @@ RollValue::RollValue(int numDie, const std::uniform_int_distribution<>& die)
 
 int RollValue::runSample(std::mt19937& mt)
 {
-    int value = 0;
+    int value { 0 };
 
     for (int i { 0 }; i < m_numDie; i++)
     {
