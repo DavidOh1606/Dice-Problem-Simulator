@@ -26,8 +26,6 @@ RollToSequence::RollToSequence(const std::vector<int>& sequence,
 int RollToSequence::runSample(std::mt19937& mt)
 {
 
-
-    int roll { 0 };
     int rollCount { 0 };
 
     std::deque<int> rolls;
@@ -36,7 +34,7 @@ int RollToSequence::runSample(std::mt19937& mt)
     while (!conditionMet(rolls))
     {
         rollCount++;
-        roll = m_die(mt);
+        int roll = m_die(mt);
 
         rolls.push_back(roll);
 
