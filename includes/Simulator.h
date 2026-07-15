@@ -3,6 +3,7 @@
 #include <random>
 
 #include "Simulation.h"
+#include <memory>
 
 
 class Simulator
@@ -16,5 +17,5 @@ class Simulator
 public:
     Simulator();
 
-    void runSimulation(Simulation& expected, int numSamples, bool printSamples);
+    void runSimulation(std::shared_ptr<Simulation> simulation, int numSamples, bool printSamples);
 };

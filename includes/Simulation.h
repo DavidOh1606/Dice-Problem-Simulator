@@ -13,6 +13,7 @@ public:
     Simulation(const std::string& valueName, const std::string& totalValueName, 
                const std::uniform_int_distribution<>& die);
 
+    virtual ~Simulation() = default;
     virtual int runSample(std::mt19937& mt) = 0;
 
     std::string& valueName();
