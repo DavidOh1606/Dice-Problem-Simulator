@@ -32,7 +32,7 @@ int main()
 
     Simulator sim;
 
-    sim.runSimulation(rollToSequence, 40000, true);
+    sim.runSimulation(sim.getUserSimulation(), 40000, true);
     // sim.runSimulation(valueMax, 40000, true);
     // sim.runSimulation(faces, 40000, true);
     // sim.runSimulation(prob, 2000, true);
