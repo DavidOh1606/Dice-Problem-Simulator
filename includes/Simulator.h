@@ -16,9 +16,13 @@ class Simulator
     std::vector<int> getSequence();
 
 
+
 public:
     Simulator();
 
     std::shared_ptr<Simulation> getUserSimulation();
+    int getNumSamples();
+    bool getPrintSamples();
+
     void runSimulation(std::shared_ptr<Simulation> simulation, int numSamples, bool printSamples);
 };

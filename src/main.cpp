@@ -18,6 +18,9 @@ int main()
     condition.push_back(2);
     // condition.push_back(2);
     // condition.push_back(3);
+    // condition.push_back(4);
+    // condition.push_back(5);
+    condition.push_back(6);
 
 
     // RollToSequence expected { condition };
@@ -32,7 +35,8 @@ int main()
 
     Simulator sim;
 
-    sim.runSimulation(sim.getUserSimulation(), 40000, true);
+    sim.runSimulation(sim.getUserSimulation(), sim.getNumSamples(), sim.getPrintSamples());
+    // sim.runSimulation(rollToSequence, 40000, true);
     // sim.runSimulation(valueMax, 40000, true);
     // sim.runSimulation(faces, 40000, true);
     // sim.runSimulation(prob, 2000, true);

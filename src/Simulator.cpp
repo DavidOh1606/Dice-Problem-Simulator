@@ -88,6 +88,41 @@ std::shared_ptr<Simulation> Simulator::getUserSimulation()
     return simulation;
 }
 
+int Simulator::getNumSamples()
+{
+    std::cout << "Enter number of times to run simulation:\n";
+    int n;
+    std::cin >> n;
+
+    while (n < 1)
+    {
+        std::cout << "Number should be 1 or greater.\n";
+        std::cin >> n;
+    }
+
+    return n;
+}
+bool Simulator::getPrintSamples()
+{
+    std::cout << "Print results of each sample? (y/n)\n";
+
+    char c;
+
+    std::cin >> c;
+
+    while (c != 'Y' && c != 'y' && c != 'N' && c != 'n')
+    {
+        std::cin >> c;
+    }
+
+    if (c == 'Y' || c == 'y')
+    {
+        return true;
+    }
+
+    return false;
+}
+
 int Simulator::getNumRolls()
 {
     std::cout << "Enter number of die to roll:\n";
